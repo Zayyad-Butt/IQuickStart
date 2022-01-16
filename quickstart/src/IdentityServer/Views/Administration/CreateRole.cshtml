@@ -1,0 +1,15 @@
+﻿@model IdentityServer.ViewModel.CreateRoleViewModel
+@{
+    ViewBag.Title = "Create New Role";
+
+}
+<form method="post" asp-action="CreateRole">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3 form-group">
+        <label asp-for="RoleName" class="form-label"></label>
+        <input asp-for="RoleName" type="text" placeholder="Email" class="form-control" id="email">
+        <span asp-validation-for="RoleName" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Role</button>
+</form>

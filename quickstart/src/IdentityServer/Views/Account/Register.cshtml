@@ -1,0 +1,29 @@
+﻿@model IdentityServer.ViewModel.RegisterViewModel
+
+<form method="post" asp-action="Register">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3 form-group">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" type="email" placeholder="Email" class="form-control" id="email">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3 form-group">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-group">
+        <label asp-for="ConfirmPassword" class="form-label"></label>
+        <input asp-for="ConfirmPassword" type="password" placeholder="Confirm Password" class="form-control" id="exampleInputPassword2">
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <select asp-for="RoleName" class="form-select" aria-label="Default select example">
+        <option selected>Select Role</option>
+        <option value="hr">HR</option>
+        <option value="business">Business</option>
+        <option value="user">User</option>
+        <option value="manager">Manager</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
